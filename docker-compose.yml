@@ -1,12 +1,12 @@
 version: '3.7'
 
 services:
-  db:
+  pdms_db:
     image: mysql:5.7
     restart: always
-    environment:
-      MYSQL_DATABASE: pdms      
+    environment:      
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pdms
     ports:
       - 3306:3306
     volumes:
@@ -18,6 +18,6 @@ services:
     ports:
       - 8055:8080
     depends_on:
-      - db
+      - pdms_db
     volumes:
       - /data/web 

@@ -3,13 +3,13 @@
 <suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
   <test name="Surefire test(failed)">
     <classes>
-      <class name="tests.UITest">
+      <class name="tests.SampleTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="testSample"/>
-          <include name="setUp"/>
+          <include name="testDelete"/>
+          <include name="testreceived"/>
+          <include name="testAdd"/>
         </methods>
-      </class> <!-- tests.UITest -->
+      </class> <!-- tests.SampleTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
