@@ -16,7 +16,7 @@ services:
     image: mt2018124/pdms_01:latest
     restart: always
     ports:
-      - 8080:8080
+      - 8055:8080
     depends_on:
       - db
     volumes:
