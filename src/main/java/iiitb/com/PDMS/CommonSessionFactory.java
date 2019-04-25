@@ -5,10 +5,11 @@ import org.hibernate.cfg.Configuration;
 
 public class CommonSessionFactory {
 	
+	public final static SessionFactory sf;
 	
 	static {
 		  try {
-			SessionFactory sf = new Configuration().configure().buildSessionFactory();
+			 sf = new Configuration().configure().buildSessionFactory();
 
 		  } catch (Throwable t) {
 		    System.out.println("Error thrown during initialization!!!");
