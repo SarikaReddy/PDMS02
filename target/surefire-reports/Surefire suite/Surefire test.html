@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 26 00:12:48 IST 2019</td>
+<td>Started on:</td><td>Sun Apr 28 22:49:58 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>7 seconds (7344 ms)</td>
+<tr><td>Total time:</td><td>9 seconds (9974 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,7 +77,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='tests.SampleTest.testAdd()'><b>testAdd</b><br>Test class: tests.SampleTest</td>
 <td><div><pre>java.lang.ExceptionInInitializerError
-	at dao.PackageDAO.addPackage(PackageDAO.java:26)
+	at dao.PackageDAO.addPackage(PackageDAO.java:32)
 	at tests.SampleTest.testAdd(SampleTest.java:28)
 Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
@@ -141,7 +141,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
 	... 64 more
-Caused by: java.net.UnknownHostException: db: Temporary failure in name resolution
+Caused by: java.net.UnknownHostException: pdms_db: Temporary failure in name resolution
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
 	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
@@ -151,9 +151,9 @@ Caused by: java.net.UnknownHostException: db: Temporary failure in name resoluti
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:132)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 67 more
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1372422140", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1372422140'><pre>java.lang.ExceptionInInitializerError
-	at dao.PackageDAO.addPackage(PackageDAO.java:26)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1129869771", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1129869771'><pre>java.lang.ExceptionInInitializerError
+	at dao.PackageDAO.addPackage(PackageDAO.java:32)
 	at tests.SampleTest.testAdd(SampleTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -250,7 +250,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
 	... 64 more
-Caused by: java.net.UnknownHostException: db: Temporary failure in name resolution
+Caused by: java.net.UnknownHostException: pdms_db: Temporary failure in name resolution
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
 	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
@@ -261,16 +261,16 @@ Caused by: java.net.UnknownHostException: db: Temporary failure in name resoluti
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 67 more
 </pre></div></td>
-<td>2</td>
+<td>4</td>
 <td>tests.SampleTest@1324409e</td></tr>
 <tr>
 <td title='tests.SampleTest.testDelete()'><b>testDelete</b><br>Test class: tests.SampleTest</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.deletePkg(PackageDAO.java:109)
+	at dao.PackageDAO.deletePkg(PackageDAO.java:135)
 	at tests.SampleTest.testDelete(SampleTest.java:23)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace819245704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace819245704'><pre>java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.deletePkg(PackageDAO.java:109)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1620459733", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1620459733'><pre>java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
+	at dao.PackageDAO.deletePkg(PackageDAO.java:135)
 	at tests.SampleTest.testDelete(SampleTest.java:23)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -307,11 +307,11 @@ Caused by: java.net.UnknownHostException: db: Temporary failure in name resoluti
 <tr>
 <td title='tests.SampleTest.testreceived()'><b>testreceived</b><br>Test class: tests.SampleTest</td>
 <td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.setReceived(PackageDAO.java:54)
+	at dao.PackageDAO.setReceived(PackageDAO.java:72)
 	at tests.SampleTest.testreceived(SampleTest.java:33)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1215029765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1215029765'><pre>java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.setReceived(PackageDAO.java:54)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2061226112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2061226112'><pre>java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
+	at dao.PackageDAO.setReceived(PackageDAO.java:72)
 	at tests.SampleTest.testreceived(SampleTest.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -356,7 +356,7 @@ Caused by: java.net.UnknownHostException: db: Temporary failure in name resoluti
 <tr>
 <td title='tests.SampleTest.testMail()'><b>testMail</b><br>Test class: tests.SampleTest</td>
 <td></td>
-<td>4</td>
+<td>5</td>
 <td>tests.SampleTest@1324409e</td></tr>
 </table><p>
 </body>

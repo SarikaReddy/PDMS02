@@ -5,18 +5,19 @@ services:
     image: mysql:5.7
     restart: always
     environment:      
-      MYSQL_ROOT_PASSWORD:
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: pdms
+      MYSQL_USER: root
     ports:
       - 3306:3306
     volumes:
       - ./pdms_dump.sql:/docker-entrypoint-initdb.d/pdms_dump.sql
 
   web:
-    image: mt2018124/pdms_01:latest
+    image: pdms02:latest
     restart: always
     ports:
-      - 8055:8080
+      - 8080:8080
     depends_on:
       - pdms_db
     volumes:

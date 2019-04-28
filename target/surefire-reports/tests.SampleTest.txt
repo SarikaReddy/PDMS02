@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: tests.SampleTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 7.766 sec <<< FAILURE! - in tests.SampleTest
-testAdd(tests.SampleTest)  Time elapsed: 2.69 sec  <<< FAILURE!
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 10.861 sec <<< FAILURE! - in tests.SampleTest
+testAdd(tests.SampleTest)  Time elapsed: 4.115 sec  <<< FAILURE!
 java.lang.ExceptionInInitializerError: null
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
@@ -48,16 +48,16 @@ java.lang.ExceptionInInitializerError: null
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
 	at iiitb.com.PDMS.CommonSessionFactory.<clinit>(CommonSessionFactory.java:12)
-	at dao.PackageDAO.addPackage(PackageDAO.java:26)
+	at dao.PackageDAO.addPackage(PackageDAO.java:32)
 	at tests.SampleTest.testAdd(SampleTest.java:28)
 
 testDelete(tests.SampleTest)  Time elapsed: 0 sec  <<< FAILURE!
 java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.deletePkg(PackageDAO.java:109)
+	at dao.PackageDAO.deletePkg(PackageDAO.java:135)
 	at tests.SampleTest.testDelete(SampleTest.java:23)
 
-testreceived(tests.SampleTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+testreceived(tests.SampleTest)  Time elapsed: 0 sec  <<< FAILURE!
 java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.setReceived(PackageDAO.java:54)
+	at dao.PackageDAO.setReceived(PackageDAO.java:72)
 	at tests.SampleTest.testreceived(SampleTest.java:33)
 

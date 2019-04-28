@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="3" ignored="0" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="7344" started-at="2019-04-25T18:42:48Z" finished-at="2019-04-25T18:42:55Z">
+  <suite name="Surefire suite" duration-ms="9974" started-at="2019-04-28T17:19:58Z" finished-at="2019-04-28T17:20:08Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="7344" started-at="2019-04-25T18:42:48Z" finished-at="2019-04-25T18:42:55Z">
+    <test name="Surefire test" duration-ms="9974" started-at="2019-04-28T17:19:58Z" finished-at="2019-04-28T17:20:08Z">
       <class name="tests.SampleTest">
-        <test-method status="FAIL" signature="testAdd()[pri:0, instance:tests.SampleTest@1324409e]" name="testAdd" duration-ms="2679" started-at="2019-04-26T00:12:48Z" finished-at="2019-04-26T00:12:50Z">
+        <test-method status="FAIL" signature="testAdd()[pri:0, instance:tests.SampleTest@1324409e]" name="testAdd" duration-ms="4105" started-at="2019-04-28T22:49:58Z" finished-at="2019-04-28T22:50:02Z">
           <exception class="java.lang.ExceptionInInitializerError">
             <full-stacktrace>
               <![CDATA[java.lang.ExceptionInInitializerError
-	at dao.PackageDAO.addPackage(PackageDAO.java:26)
+	at dao.PackageDAO.addPackage(PackageDAO.java:32)
 	at tests.SampleTest.testAdd(SampleTest.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -108,7 +108,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
 	... 64 more
-Caused by: java.net.UnknownHostException: db: Temporary failure in name resolution
+Caused by: java.net.UnknownHostException: pdms_db: Temporary failure in name resolution
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
 	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
@@ -124,14 +124,14 @@ Caused by: java.net.UnknownHostException: db: Temporary failure in name resoluti
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAdd -->
-        <test-method status="FAIL" signature="testDelete()[pri:0, instance:tests.SampleTest@1324409e]" name="testDelete" duration-ms="0" started-at="2019-04-26T00:12:50Z" finished-at="2019-04-26T00:12:50Z">
+        <test-method status="FAIL" signature="testDelete()[pri:0, instance:tests.SampleTest@1324409e]" name="testDelete" duration-ms="0" started-at="2019-04-28T22:50:02Z" finished-at="2019-04-28T22:50:02Z">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[Could not initialize class iiitb.com.PDMS.CommonSessionFactory]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.deletePkg(PackageDAO.java:109)
+	at dao.PackageDAO.deletePkg(PackageDAO.java:135)
 	at tests.SampleTest.testDelete(SampleTest.java:23)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -168,18 +168,18 @@ Caused by: java.net.UnknownHostException: db: Temporary failure in name resoluti
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDelete -->
-        <test-method status="PASS" signature="testMail()[pri:0, instance:tests.SampleTest@1324409e]" name="testMail" duration-ms="4618" started-at="2019-04-26T00:12:50Z" finished-at="2019-04-26T00:12:55Z">
+        <test-method status="PASS" signature="testMail()[pri:0, instance:tests.SampleTest@1324409e]" name="testMail" duration-ms="5817" started-at="2019-04-28T22:50:02Z" finished-at="2019-04-28T22:50:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMail -->
-        <test-method status="FAIL" signature="testreceived()[pri:0, instance:tests.SampleTest@1324409e]" name="testreceived" duration-ms="0" started-at="2019-04-26T00:12:55Z" finished-at="2019-04-26T00:12:55Z">
+        <test-method status="FAIL" signature="testreceived()[pri:0, instance:tests.SampleTest@1324409e]" name="testreceived" duration-ms="0" started-at="2019-04-28T22:50:08Z" finished-at="2019-04-28T22:50:08Z">
           <exception class="java.lang.NoClassDefFoundError">
             <message>
               <![CDATA[Could not initialize class iiitb.com.PDMS.CommonSessionFactory]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.setReceived(PackageDAO.java:54)
+	at dao.PackageDAO.setReceived(PackageDAO.java:72)
 	at tests.SampleTest.testreceived(SampleTest.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

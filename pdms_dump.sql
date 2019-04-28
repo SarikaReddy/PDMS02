@@ -45,7 +45,7 @@ DROP TABLE IF EXISTS `package`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `package` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `collect_status` char(1) NOT NULL,
   `pkg_collect_time` varchar(255) DEFAULT NULL,
   `pkg_entry_time` varchar(255) DEFAULT NULL,

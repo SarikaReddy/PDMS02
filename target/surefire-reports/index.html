@@ -153,7 +153,7 @@
                   </a> <!-- testAdd -->
                   <span class="method-name">testAdd</span>
                   <div class="stack-trace">java.lang.ExceptionInInitializerError
-	at dao.PackageDAO.addPackage(PackageDAO.java:26)
+	at dao.PackageDAO.addPackage(PackageDAO.java:32)
 	at tests.SampleTest.testAdd(SampleTest.java:28)
 Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
@@ -217,7 +217,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
 	... 64 more
-Caused by: java.net.UnknownHostException: db: Temporary failure in name resolution
+Caused by: java.net.UnknownHostException: pdms_db: Temporary failure in name resolution
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
 	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324)
@@ -237,7 +237,7 @@ Caused by: java.net.UnknownHostException: db: Temporary failure in name resoluti
                   </a> <!-- testDelete -->
                   <span class="method-name">testDelete</span>
                   <div class="stack-trace">java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.deletePkg(PackageDAO.java:109)
+	at dao.PackageDAO.deletePkg(PackageDAO.java:135)
 	at tests.SampleTest.testDelete(SampleTest.java:23)
 ... Removed 29 stack frames
 </div> <!-- stack-trace -->
@@ -249,7 +249,7 @@ Caused by: java.net.UnknownHostException: db: Temporary failure in name resoluti
                   </a> <!-- testreceived -->
                   <span class="method-name">testreceived</span>
                   <div class="stack-trace">java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.setReceived(PackageDAO.java:54)
+	at dao.PackageDAO.setReceived(PackageDAO.java:72)
 	at tests.SampleTest.testreceived(SampleTest.java:33)
 ... Removed 29 stack frames
 </div> <!-- stack-trace -->
@@ -327,11 +327,11 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testMail')
 data.setCell(0, 2, 'tests.SampleTest')
-data.setCell(0, 3, 4618);
+data.setCell(0, 3, 5817);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testAdd')
 data.setCell(1, 2, 'tests.SampleTest')
-data.setCell(1, 3, 2679);
+data.setCell(1, 3, 4105);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testDelete')
 data.setCell(2, 2, 'tests.SampleTest')
@@ -344,7 +344,7 @@ window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -381,17 +381,17 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testDelete</span>
-                <span class="method-start">2691 ms</span>
+                <span class="method-start">4115 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testMail</span>
-                <span class="method-start">2692 ms</span>
+                <span class="method-start">4116 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testreceived</span>
-                <span class="method-start">7312 ms</span>
+                <span class="method-start">9934 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

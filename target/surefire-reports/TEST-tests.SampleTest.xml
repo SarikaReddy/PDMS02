@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.SampleTest" time="7.307" tests="4" errors="0" skipped="0" failures="3">
+<testsuite name="tests.SampleTest" time="9.928" tests="4" errors="0" skipped="0" failures="3">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -59,7 +59,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testAdd" classname="tests.SampleTest" time="2.69">
+  <testcase name="testAdd" classname="tests.SampleTest" time="4.115">
     <failure type="java.lang.ExceptionInInitializerError:"><![CDATA[java.lang.ExceptionInInitializerError: null
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929)
@@ -105,38 +105,37 @@
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:689)
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:724)
 	at iiitb.com.PDMS.CommonSessionFactory.<clinit>(CommonSessionFactory.java:12)
-	at dao.PackageDAO.addPackage(PackageDAO.java:26)
+	at dao.PackageDAO.addPackage(PackageDAO.java:32)
 	at tests.SampleTest.testAdd(SampleTest.java:28)
 ]]></failure>
     <system-out><![CDATA[Configuring TestNG with: TestNG652Configurator
 Error thrown during initialization!!!
 ]]></system-out>
-    <system-err><![CDATA[Apr 26, 2019 12:12:48 AM org.hibernate.Version logVersion
+    <system-err><![CDATA[Apr 28, 2019 10:49:58 PM org.hibernate.Version logVersion
 INFO: HHH000412: Hibernate Core {5.4.0.Final}
-Apr 26, 2019 12:12:48 AM org.hibernate.cfg.Environment <clinit>
+Apr 28, 2019 10:49:58 PM org.hibernate.cfg.Environment <clinit>
 INFO: HHH000206: hibernate.properties not found
-Apr 26, 2019 12:12:50 AM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+Apr 28, 2019 10:50:01 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
 INFO: HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-Apr 26, 2019 12:12:50 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+Apr 28, 2019 10:50:01 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
-Apr 26, 2019 12:12:50 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
-INFO: HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://db:3306/pdms]
-Apr 26, 2019 12:12:50 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+Apr 28, 2019 10:50:01 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://pdms_db:3306/pdms]
+Apr 28, 2019 10:50:01 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001001: Connection properties: {user=root, password=****}
-Apr 26, 2019 12:12:50 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+Apr 28, 2019 10:50:01 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001003: Autocommit mode: false
-Apr 26, 2019 12:12:50 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+Apr 28, 2019 10:50:01 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
 INFO: HHH000115: Hibernate connection pool size: 100 (min=1)
-Apr 26, 2019 12:12:50 AM org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator initiateService
+Apr 28, 2019 10:50:02 PM org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator initiateService
 WARN: HHH000342: Could not obtain connection to query metadata : null
-Apr 26, 2019 12:12:50 AM org.hibernate.dialect.Dialect <init>
+Apr 28, 2019 10:50:02 PM org.hibernate.dialect.Dialect <init>
 INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-Apr 26, 2019 12:12:50 AM org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl makeLobCreatorBuilder
+Apr 28, 2019 10:50:02 PM org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl makeLobCreatorBuilder
 INFO: HHH000422: Disabling contextual LOB creation as connection was null
-Apr 26, 2019 12:12:50 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+Apr 28, 2019 10:50:02 PM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
 WARN: SQL Error: 0, SQLState: 08S01
-Apr 26, 2019 12:12:50 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+Apr 28, 2019 10:50:02 PM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
 ERROR: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -144,14 +143,14 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
   </testcase>
   <testcase name="testDelete" classname="tests.SampleTest" time="0">
     <failure message="Could not initialize class iiitb.com.PDMS.CommonSessionFactory" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.deletePkg(PackageDAO.java:109)
+	at dao.PackageDAO.deletePkg(PackageDAO.java:135)
 	at tests.SampleTest.testDelete(SampleTest.java:23)
 </failure>
   </testcase>
-  <testcase name="testMail" classname="tests.SampleTest" time="4.616"/>
-  <testcase name="testreceived" classname="tests.SampleTest" time="0.001">
+  <testcase name="testMail" classname="tests.SampleTest" time="5.813"/>
+  <testcase name="testreceived" classname="tests.SampleTest" time="0">
     <failure message="Could not initialize class iiitb.com.PDMS.CommonSessionFactory" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class iiitb.com.PDMS.CommonSessionFactory
-	at dao.PackageDAO.setReceived(PackageDAO.java:54)
+	at dao.PackageDAO.setReceived(PackageDAO.java:72)
 	at tests.SampleTest.testreceived(SampleTest.java:33)
 </failure>
   </testcase>

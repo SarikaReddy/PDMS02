@@ -19,7 +19,7 @@
 	$("#context").hide();
 	$("#addpkg").hide();
 	$("#status").empty();
-	var api = "http://localhost:8055/PDMS/webapi/Students/getAll";
+	var api = "http://localhost:8080/PDMS/webapi/Students/getAll";
 	var dataList = document.getElementById('names');
   	$.get(api , function(data, status){
 			data.forEach(function(item){
@@ -42,7 +42,7 @@
   }
   
   function getAll(){
-	  var api = "http://localhost:8055/PDMS/webapi/Packages/getAll/"+localStorage.getItem('studID');
+	  var api = "http://localhost:8080/PDMS/webapi/Packages/getAll/"+localStorage.getItem('studID');
 	  $.get(api , function(data, status){
 		    $("#status").empty();
 			data.forEach(function(item){
@@ -69,7 +69,7 @@
 	  var stud_id = localStorage.getItem('studID');
 	  $.ajax({
 	    	type: "GET",
-	        url: "http://localhost:8055/PDMS/webapi/Packages/delPkg/"+stud_id+"/"+pkgid,
+	        url: "http://localhost:8080/PDMS/webapi/Packages/delPkg/"+stud_id+"/"+pkgid,
 	        success:function(result){
 	        	alert(result);
 	        	getAll();
@@ -94,7 +94,7 @@
 	    
 	    $.ajax({
 	    	type: "POST",
-	        url: "http://localhost:8055/PDMS/webapi/Packages/setReceived/"+localStorage.getItem('studID'),
+	        url: "http://localhost:8080/PDMS/webapi/Packages/setReceived/"+localStorage.getItem('studID'),
 	        data: data,
 	        cache: false,
 	        success:function(result){
@@ -121,7 +121,7 @@
 	    
 	    $.ajax({
 	    	type: "POST",
-	        url: "http://localhost:8055/PDMS/webapi/Packages/addPkg/"+localStorage.getItem('studID'),
+	        url: "http://localhost:8080/PDMS/webapi/Packages/addPkg/"+localStorage.getItem('studID'),
 	        data: data,
 	        cache: false,
 	        success:function(result){
@@ -139,7 +139,7 @@
 	  var stud_id = localStorage.getItem('studID');
 	  $.ajax({
 	    	type: "GET",
-	        url: "http://localhost:8055/PDMS/webapi/Packages/sendMailOnAdd/"+stud_id+"/"+pkgid,
+	        url: "http://localhost:8080/PDMS/webapi/Packages/sendMailOnAdd/"+stud_id+"/"+pkgid,
 	        success:function(result){
 	        	alert(result);
 	        }
