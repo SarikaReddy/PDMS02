@@ -60,7 +60,6 @@ public class PackageController {
 		recname += "("+recroll+")";
 		
 		String resp = PackageDAO.setReceived(recname,collect_time,pkg_id,stud_id);
-		//System.out.println(recname+" "+recroll+" "+collect_time+" "+stud_id+" "+pkg_id);
 	
 		return Response.status(201).entity(resp).build();
 
@@ -77,4 +76,15 @@ public class PackageController {
 		
 		return Response.ok(resp).build();
 	}
+	
+	@Path("/delPkg/{id}/{pkgid}")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public Response deletePkg(@PathParam("id") int id,
+							  @PathParam("pkgid") String pkgid) {
+		
+		String resp = PackageDAO.deletePkg(id,pkgid);
+		return Response.ok(resp).build();
+	}
+	
 }

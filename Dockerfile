@@ -1,5 +1,4 @@
-FROM tomcat:8.0-alpine
+FROM tomcat
 
 ADD ./target/PDMS.war /usr/local/tomcat/webapps/PDMS.war
 
-EXPOSE 8054

@@ -1,26 +1,16 @@
 package iiitb.com.PDMS;
 
-import java.util.Date;
 import java.util.Properties;
 import javax.mail.Authenticator;
-import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
-import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
-import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
 
 import bean.Package;
-
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
 
 
 public class SendMail {
@@ -55,17 +45,17 @@ public class SendMail {
 			
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
 			
-			message.setSubject("Test Mail");
+			message.setSubject("Package Mail");
 			message.setText("Package at the reception!!!");
 			
 			
 			Transport.send(message);
 			
-			return "Success!";
+			return "Mail sent successfully!!!";
 		}
 		catch(MessagingException mex) {
 			mex.printStackTrace();
-			return "Failure!";
+			return "Could not send mail!!!";
 		}
 	}
 	
@@ -106,11 +96,11 @@ public class SendMail {
 			
 			Transport.send(message);
 			
-			return "Success!";
+			return "Mail sent successfully!!";
 		}
 		catch(MessagingException mex) {
 			mex.printStackTrace();
-			return "Failure!";
+			return "Could not send mail!!";
 		}
 	}
 }

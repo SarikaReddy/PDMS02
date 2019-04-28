@@ -16,7 +16,7 @@ import javax.mail.internet.MimeMessage;
 
 public class GMailServer extends javax.mail.Authenticator
 {
-    private String mailhost ="smtp.gmail.com"; ; //"smtp.mail.yahoo.com"; //"smtp.gmail.com";
+    private String mailhost ="smtp.gmail.com"; //"smtp.mail.yahoo.com"; //"smtp.gmail.com";
     private String user;
     private String password;
     private Session session;  
