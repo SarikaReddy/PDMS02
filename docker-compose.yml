@@ -14,7 +14,7 @@ services:
       - ./pdms_dump.sql:/docker-entrypoint-initdb.d/pdms_dump.sql
 
   web:
-    image: pdms02:latest
+    image: mt2018124/pdms_01:latest
     restart: always
     ports:
       - 8080:8080
